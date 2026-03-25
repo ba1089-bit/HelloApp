@@ -1,4 +1,4 @@
-// UC5: Using enhanced for loop (for-each)
+// UC6: Use enhanced for loop + substring
 
 public class HelloWorld {
     public static void main(String[] args) {
@@ -8,10 +8,19 @@ public class HelloWorld {
             System.out.println("Hello, World!");
         } 
         else {
-            // Enhanced for loop
+
+            String names = "";
+
+            // Build string with delimiter
             for (String name : args) {
-                System.out.println("Hello " + name);
+                names += name + ", ";
             }
+
+            // Remove trailing ", "
+            names = names.substring(0, names.length() - 2);
+
+            // Final output
+            System.out.println("Hello " + names);
         }
     }
 }
