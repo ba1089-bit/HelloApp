@@ -1,4 +1,4 @@
-// UC6: Use enhanced for loop + substring
+// UC7: Using String.join()
 
 public class HelloWorld {
     public static void main(String[] args) {
@@ -8,18 +8,10 @@ public class HelloWorld {
             System.out.println("Hello, World!");
         } 
         else {
+            // Join names with comma
+            String names = String.join(", ", args);
 
-            String names = "";
-
-            // Build string with delimiter
-            for (String name : args) {
-                names += name + ", ";
-            }
-
-            // Remove trailing ", "
-            names = names.substring(0, names.length() - 2);
-
-            // Final output
+            // Print greeting
             System.out.println("Hello " + names);
         }
     }
