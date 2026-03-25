@@ -1,16 +1,16 @@
-// UC4: Display multiple names from command-line
+// UC5: Using enhanced for loop (for-each)
 
 public class HelloWorld {
     public static void main(String[] args) {
 
-        // If no arguments → default
+        // Default case
         if (args.length == 0) {
-            System.out.println("Hello World");
+            System.out.println("Hello, World!");
         } 
         else {
-            // Loop through all names
-            for (int i = 0; i < args.length; i++) {
-                System.out.println("Hello " + args[i]);
+            // Enhanced for loop
+            for (String name : args) {
+                System.out.println("Hello " + name);
             }
         }
     }
